@@ -1,0 +1,79 @@
+# Speech_to_text_summarization_app
+
+# PROJECT DESCRIPTION
+
+** Earnings calls speech to text **
+Our team used used NLP, transformers, Whisper, and OpenAI to transcribe Nvidia’s most recent earnings call and translate this transcription into French, Spanish, and Japanese.
+
+Our goals: 
+1. Most publicly traded companies have quarterly earnings calls where the company’s management team discusses the financial performance, future plans, and answers questions from investors and analysts.
+2. These calls provide valuable insights into current performance and management perspective; however, analysts and investors may not have the time to sit through the earnings call.
+3. To address this challenge the team has developed an application where an audio file could be uploaded and the app would translate speech to text, provide a summary and then also translate into other languages.
+4. During development, the team recognized there could be broader usages.
+
+## INSTALLATION
+
+1. Ensure you have Python 3.12 or higher installed.
+2. Clone this repository: `git clone https://github.com/jessegunter/Speech_to_text_summarization_app.git`
+
+## USAGE
+
+1. Run the project: `ADD!!!`
+
+
+### APPROACH IN ACHIEVING PROJECT GOALS:
+1. User Interface: HTML and Python used to develop user interface.
+2. MP3 File: Any MP3 file can be uploaded through the interface.
+3. Speech to Text Transformation: Whisper was utilized to transform speech into a text file.
+4. Text to Summary Transformation: ChatGPT was utilized to summarize the text file generated with Whisper.
+5. Text Summary Translated to Different Languages: ChatGPT was utilized to translate the summary into different languages.
+
+## USER INTERFACE   
+1. An interface was developed that allows the user to upload a MP3 to be summarized and translated.
+2. The front end was developed in HTML and python code drives the back end of the user interface. 
+
+## Whisper
+1. Whisper is an OpenAI developed AI model that is highly accurate in transcribing speech into text.
+2. The Whisper AI model was trained on 680,000 hours of multilingual supervised data from the internet.
+3. Whisper supports speech to text in over 90 languages.
+4. The team utilized Whisper to transcribe an audio file in English to an English text file.
+
+Can we use Word Error Rate (WER) to compare the model transcribed text to a manually transcribed version?
+
+## Text Summarization
+1. The team utilized Mistral 7b openorca.Q6_K.gguf to take the text output from the Whisper model and summarize.
+2. Mistral 7b openorca.Q6_K.gguf, available on Hugging Face, is a large language model that is well-suited for summarizing long texts in an efficient and fast manner.
+3. To ensure the text does not exceed limitations a chunk text function was created that divided the input text into a max length equal to 2,048
+4. The chunks were summarized and then joined for a combined summary.
+
+## Summarization Translation
+1. Among all the capabilities of ChatGPT, the team utilized its API to translate text from one language to another.
+2. A function was created that takes two arguments: the text to translate and target language.
+3. The openai.Completion.create() method was used to send a text completion request and asks the API to translate the text into the target language.
+
+
+### PROBLEMS ENCOUNTERED:
+Used Hugging Face but its performance was too slow. Also used t5-base for language translation but its performance was also not good.
+
+
+### FUTURE CONSIDERATIONS:
+Can we use Word Error Rate (WER) to compare the model transcribed text to a manually transcribed version?
+
+## REFERENCES
+https://events.q4inc.com/attendee/313193359/guest
+https://medium.com/@kharatmoljagdish/using-openai-whisper-python-library-for-speech-to-text-dda4f558fccc
+https://github.com/openai/whisper
+https://www.wikihow.com/Install-FFmpeg-on-Windows
+https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF/blob/main/mistral-7b-openorca.Q6_K.gguf
+https://docs.mistral.ai/getting-started/models/models_overview/
+
+
+## TEAM MEMBERS
+1. Jesse Gunter
+2. Mark Johnson
+3. Marianne Mittelstadt
+4. Tonya Soriano
+5. Ethan Wyman
+
+
+
