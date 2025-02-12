@@ -18,7 +18,36 @@ Our goals:
 
 ## USAGE
 
-1. Run the project: `ADD!!!`
+# Install required Python packages
+pip install flask
+pip install flask-cors
+pip install python-dotenv
+pip install openai
+pip install whisper
+pip install pydub
+pip install numpy
+pip install transformers
+
+# if you don’t have home brew installed, run this entire command in terminal and follow prompts
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Install FFmpeg on Mac with Homebrew
+brew install ffmpeg
+
+# To run front end:
+Navigate to file and run open Frontend.html or double click in finder
+
+# To run backend:
+Python Flask_Backend.py
+
+# Here is an example:
+(base) jessegunter@Jesses-MacBook-Pro Speech_to_text_summarization_app % python Flask_Backend.py
+ * Serving Flask app 'Flask_Backend'
+ * Debug mode: on
+* Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 815-082-824
 
 
 ### APPROACH IN ACHIEVING PROJECT GOALS:
@@ -67,12 +96,12 @@ Used Hugging Face but its performance was too slow. Also used t5-base for langua
 Can we use Word Error Rate (WER) to compare the model transcribed text to a manually transcribed version?
 
 ## REFERENCES
-https://events.q4inc.com/attendee/313193359/guest
-https://medium.com/@kharatmoljagdish/using-openai-whisper-python-library-for-speech-to-text-dda4f558fccc
-https://github.com/openai/whisper
-https://www.wikihow.com/Install-FFmpeg-on-Windows
-https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF/blob/main/mistral-7b-openorca.Q6_K.gguf
-https://docs.mistral.ai/getting-started/models/models_overview/
+Nvidia https://events.q4inc.com/attendee/313193359/guest
+Medium https://medium.com/@kharatmoljagdish/using-openai-whisper-python-library-for-speech-to-text-dda4f558fccc
+Whisper https://github.com/openai/whisper
+FFmpeg https://www.wikihow.com/Install-FFmpeg-on-Windows
+HuggingFace https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF/blob/main/mistral-7b-openorca.Q6_K.gguf
+Mistral https://docs.mistral.ai/getting-started/models/models_overview/
 
 
 ## TEAM MEMBERS
