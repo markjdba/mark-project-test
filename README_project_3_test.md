@@ -1,4 +1,4 @@
-# Speech_to_text_summarization_app
+# Speech to Text Summarization App
 
 <p align="center">
   <img src="/Resources/logo1.jpg" />
@@ -21,8 +21,6 @@ Our goals:
 1. Ensure you have Python 3.12 or higher installed.
 2. Clone this repository: `git clone https://github.com/jessegunter/Speech_to_text_summarization_app.git`
 
-## USAGE
-
 ### Install required Python packages
 pip install flask
 pip install flask-cors
@@ -38,6 +36,8 @@ pip install transformers
 
 ### Install FFmpeg on Mac with Homebrew
 brew install ffmpeg
+
+## USAGE
 
 ### To run front end:
 Navigate to file and run open Frontend.html or double click in finder
