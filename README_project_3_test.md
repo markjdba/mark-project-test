@@ -1,5 +1,10 @@
 # Speech_to_text_summarization_app
 
+<p align="center">
+  <img src="/Resources/logo1.jpg" />
+</p>
+
+
 ## PROJECT DESCRIPTION
 
 ** Earnings calls speech to text **
@@ -57,6 +62,13 @@ Press CTRL+C to quit
 3. Speech to Text Transformation: Whisper was utilized to transform speech into a text file.
 4. Text to Summary Transformation: GPT-3.5-turbo was utilized to summarize the text file generated with Whisper.
 5. Text Summary Translated to Different Languages: GPT-3.5-turbo was utilized to translate the summary into different languages.
+6. Cost Comparison for Summarizing an Earnings Call (Example)
+Let’s assume an earnings call transcript has 10,000 words (~15,000 tokens and the summary out put in 500 words (~750 tokens).
+
+<p align="center">
+  <img src="/Resources/approach.png" />
+</p>
+
 
 ## USER INTERFACE   
 1. An interface was developed that allows the user to upload a MP3 to be summarized and translated.
@@ -69,16 +81,36 @@ Press CTRL+C to quit
     E. Translate To: Select from drop down the language to translate into
     F. Upload & Transcribe kicks off the process
 
+<p align="center">
+  <img src="/Resources/AI_Speech-to-Text.png" />
+</p>
+
+
 ## Whisper
 1. Whisper is an OpenAI developed AI model that is highly accurate in transcribing speech into text.
 2. The Whisper AI model was trained on 680,000 hours of multilingual supervised data from the internet.
 3. Whisper supports speech to text in over 90 languages.
 4. The team utilized Whisper to transcribe an audio file in English to an English text file.
-5. The team used Nvidia’s Q3 FYFY25 Financial Results.mp3 during the development of project
+5. The team used Nvidia’s Q3 FYFY25 Financial Results.mp3 during the development of project.
+
+## Tokenization
+1. The text input is first broken down into tokens, which are used by the GPT-3.5-turbo model.
+2. Different tokenizers were explored by the team and although cl100k_base is the OpenAI recommended choice the team utilized the bert-based-uncased tokenizer to utilize a different technology called for in the project.
+3. Bert-based-uncased was a good choice as it is ideal for nuanced interpretation.
+4. The transcription of the Nvidia financial call was over 10,000 tokens so a chunking function was also utilized. 
+
+## Tokenizer
+<p align="center">
+  <img src="/Resources/tokenizer1.png" />
+</p>
+
+<p align="center">
+  <img src="/Resources/tokenizer2.png" />
+</p>
 
 ## Text Summarization
-1. The team utilized Mistral 7b openorca.Q6_K.gguf to take the text output from the Whisper model and summarize.
-2. Mistral 7b openorca.Q6_K.gguf, available on Hugging Face, is a large language model that is well-suited for summarizing long texts in an efficient and fast manner.
+1. OpenAI provides an API solution which allowed the team to utilize GPT-3.5 Turbo to take the text output from the Whisper model and summarize 
+2. GPT-3.5 Turbo text summarization allows for flexibility with prompts and provides abstractive summarization
 3. To ensure the text does not exceed limitations a chunk text function was created that divided the input text into a max length equal to 2,048
 4. The chunks were summarized and then joined for a combined summary.
 
@@ -88,14 +120,18 @@ Press CTRL+C to quit
 3. The openai.Completion.create() method was used to send a text completion request and asks the API to translate the text into the target language.
 4. The language translation function also uses the chunk text function to ensure the text does not exceed limitations.
 
+## ADDITIONAL QUESTIONS
 
-### PROBLEMS ENCOUNTERED:
-The team explored different pre-trained models to summarize the transcription text including Mistral 7b openorca.Q6_K.gguf.
-However, the team had difficulty integrating the model into the developed code so moved to a streamlined approach of using GPT-3.5-turbo for both summarization and translation
+### FUTURE CONSIDERATIONS
+### Performance metrics:
+1. To develop a confidence score for both the summarization and the translation, a comparison to human summarizations and translations is needed
+2. Although a doable approach, comparisons to human summarizations and translations is difficult and can be expensive
+3. Given more time the team would explore different ways to develop a confidence score in an efficient manne
 
-
-### FUTURE CONSIDERATIONS:
-Given more time the team would explore different ways to develop a confidence score in an efficient manner.
+### PROBLEMS ENCOUNTERED:  
+### Summarization models
+1. The team explored different pre-trained models to summarize the transcription text including Mistral 7b openorca.Q6_K.gguf
+2. However, the team had difficulty integrating the model into the developed code so moved to a streamlined approach of using GPT-3.5-turbo for both summarization and translation
 
 
 ## REFERENCES
