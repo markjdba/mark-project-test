@@ -90,11 +90,13 @@ Press CTRL+C to quit
 
 
 ### PROBLEMS ENCOUNTERED:
-Used Hugging Face but its performance was too slow. Also used t5-base for language translation but its performance was also not good.
+The team explored different pre-trained models to summarize the transcription text including Mistral 7b openorca.Q6_K.gguf.
+However, the team had difficulty integrating the model into the developed code so moved to a streamlined approach of using GPT-3.5-turbo for both summarization and translation
 
 
 ### FUTURE CONSIDERATIONS:
-Can we use Word Error Rate (WER) to compare the model transcribed text to a manually transcribed version?
+Given more time the team would explore different ways to develop a confidence score in an efficient manner.
+
 
 ## REFERENCES
 1. Nvidia https://events.q4inc.com/attendee/313193359/guest
