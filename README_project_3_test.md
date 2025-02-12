@@ -1,6 +1,6 @@
 # Speech_to_text_summarization_app
 
-# PROJECT DESCRIPTION
+## PROJECT DESCRIPTION
 
 ** Earnings calls speech to text **
 Our team used used NLP, transformers, Whisper, and OpenAI to transcribe Nvidia’s most recent earnings call and translate this transcription into French, Spanish, and Japanese.
@@ -25,20 +25,26 @@ Our goals:
 1. User Interface: HTML and Python used to develop user interface.
 2. MP3 File: Any MP3 file can be uploaded through the interface.
 3. Speech to Text Transformation: Whisper was utilized to transform speech into a text file.
-4. Text to Summary Transformation: ChatGPT was utilized to summarize the text file generated with Whisper.
-5. Text Summary Translated to Different Languages: ChatGPT was utilized to translate the summary into different languages.
+4. Text to Summary Transformation: GPT-3.5-turbo was utilized to summarize the text file generated with Whisper.
+5. Text Summary Translated to Different Languages: GPT-3.5-turbo was utilized to translate the summary into different languages.
 
 ## USER INTERFACE   
 1. An interface was developed that allows the user to upload a MP3 to be summarized and translated.
 2. The front end was developed in HTML and python code drives the back end of the user interface. 
+3. How it works:
+    A. User chooses an audio file to upload
+    B. Radio button selection of Full Transcription or Summarize Text
+    C. Choose Language: Select from drop down the language of the audio file
+    D. Radio button selection of user wants it translated to different language
+    E. Translate To: Select from drop down the language to translate into
+    F. Upload & Transcribe kicks off the process
 
 ## Whisper
 1. Whisper is an OpenAI developed AI model that is highly accurate in transcribing speech into text.
 2. The Whisper AI model was trained on 680,000 hours of multilingual supervised data from the internet.
 3. Whisper supports speech to text in over 90 languages.
 4. The team utilized Whisper to transcribe an audio file in English to an English text file.
-
-Can we use Word Error Rate (WER) to compare the model transcribed text to a manually transcribed version?
+5. The team used Nvidia’s Q3 FYFY25 Financial Results.mp3 during the development of project
 
 ## Text Summarization
 1. The team utilized Mistral 7b openorca.Q6_K.gguf to take the text output from the Whisper model and summarize.
@@ -50,6 +56,7 @@ Can we use Word Error Rate (WER) to compare the model transcribed text to a manu
 1. Among all the capabilities of ChatGPT, the team utilized its API to translate text from one language to another.
 2. A function was created that takes two arguments: the text to translate and target language.
 3. The openai.Completion.create() method was used to send a text completion request and asks the API to translate the text into the target language.
+4. The language translation function also uses the chunk text function to ensure the text does not exceed limitations.
 
 
 ### PROBLEMS ENCOUNTERED:
