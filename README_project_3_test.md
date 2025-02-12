@@ -18,7 +18,7 @@ Our goals:
 
 ## USAGE
 
-# Install required Python packages
+### Install required Python packages
 pip install flask
 pip install flask-cors
 pip install python-dotenv
@@ -28,18 +28,19 @@ pip install pydub
 pip install numpy
 pip install transformers
 
-# if you don’t have home brew installed, run this entire command in terminal and follow prompts
+### if you don’t have home brew installed, run this entire command in terminal and follow prompts
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# Install FFmpeg on Mac with Homebrew
+
+### Install FFmpeg on Mac with Homebrew
 brew install ffmpeg
 
-# To run front end:
+### To run front end:
 Navigate to file and run open Frontend.html or double click in finder
 
-# To run backend:
+### To run backend:
 Python Flask_Backend.py
 
-# Here is an example:
+### Here is an example:
 (base) jessegunter@Jesses-MacBook-Pro Speech_to_text_summarization_app % python Flask_Backend.py
  * Serving Flask app 'Flask_Backend'
  * Debug mode: on
@@ -50,7 +51,7 @@ Press CTRL+C to quit
  * Debugger PIN: 815-082-824
 
 
-### APPROACH IN ACHIEVING PROJECT GOALS:
+## APPROACH IN ACHIEVING PROJECT GOALS:
 1. User Interface: HTML and Python used to develop user interface.
 2. MP3 File: Any MP3 file can be uploaded through the interface.
 3. Speech to Text Transformation: Whisper was utilized to transform speech into a text file.
@@ -96,12 +97,12 @@ Used Hugging Face but its performance was too slow. Also used t5-base for langua
 Can we use Word Error Rate (WER) to compare the model transcribed text to a manually transcribed version?
 
 ## REFERENCES
-Nvidia https://events.q4inc.com/attendee/313193359/guest
-Medium https://medium.com/@kharatmoljagdish/using-openai-whisper-python-library-for-speech-to-text-dda4f558fccc
-Whisper https://github.com/openai/whisper
-FFmpeg https://www.wikihow.com/Install-FFmpeg-on-Windows
-HuggingFace https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF/blob/main/mistral-7b-openorca.Q6_K.gguf
-Mistral https://docs.mistral.ai/getting-started/models/models_overview/
+1. Nvidia https://events.q4inc.com/attendee/313193359/guest
+2. AmongMedium https://medium.com/@kharatmoljagdish/using-openai-whisper-python-library-for-speech-to-text-dda4f558fccc
+3. AmongWhisper https://github.com/openai/whisper
+4. AmongFFmpeg https://www.wikihow.com/Install-FFmpeg-on-Windows
+5. AmongHuggingFace https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF/blob/main/mistral-7b-openorca.Q6_K.gguf
+6. AmongMistral https://docs.mistral.ai/getting-started/models/models_overview/
 
 
 ## TEAM MEMBERS
